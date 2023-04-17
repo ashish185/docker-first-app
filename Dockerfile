@@ -10,6 +10,6 @@ RUN npm install
 
 
 #Bundle App source
-COPY ..
+COPY . .
 EXPOSE 3010
 CMD ["npm", "start"]
