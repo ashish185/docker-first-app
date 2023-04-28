@@ -1,3 +1,0 @@
-kubectl rollout history deployment
-kubectl rollout undo deployment
-kubectl rollout status deployment
