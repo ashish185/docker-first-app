@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: nginx-rolling-update-deployment
+spec:
+ replicas: 3
+ selector:
+   matchLabels:
+    app: nginx-rud
+ template:
+   metadata:
+    name: nginx-rud-pod
+    labels:
+     app: nginx-rud
+   spec:
+     containers:
+     - name: nginx-rud-container
+       image: nginx:1.21

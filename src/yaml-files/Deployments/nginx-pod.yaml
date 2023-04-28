@@ -1,0 +1,11 @@
+#All attributes are mandatory here.
+apiVersion: v1 # Version of Kubernatives used to create the object.
+kind: Pod # What kind of object you want to create, For ex: POD, Replica set
+metadata: # Uniquely identify the object like name,UID and optional namespace
+ name: nginx-pod
+ labels:
+  pod: nginx-pod
+spec:  #What state you desire for the object
+ containers:
+ - name: nginx  #Hyphen defines a list,  here we can put the version also. 
+   image: nginx # This image will be find first at local system else it will search at docker.io/library/nginx
